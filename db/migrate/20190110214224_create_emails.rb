@@ -5,6 +5,7 @@ class CreateEmails < ActiveRecord::Migration[5.2]
       t.boolean :primary
       t.boolean :confirmed
       t.integer :user_id
+      t.belongs_to :user, index: true
       t.timestamps
     end
   end
