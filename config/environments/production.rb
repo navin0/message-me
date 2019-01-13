@@ -43,6 +43,8 @@ Rails.application.configure do
 
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
+  config.middleware.use ChatActionCable
+  config.web_socket_server_url = 'wss://message-me-navinv.herokuapp.com'
   # config.action_cable.url = 'wss://example.com/cable'
   config.action_cable.allowed_request_origins = [ 'https://message-me-navinv.herokuapp.com']
 
